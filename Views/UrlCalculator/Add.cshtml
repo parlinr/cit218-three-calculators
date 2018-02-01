@@ -1,1 +1,9 @@
-<p>@ViewBag.Operand1 + @ViewBag.Operand2 = @ViewBag.Sum</p>
+<div id="CalculatorOutput">
+    @if (ViewBag.sum != null)
+    {
+        <p>Answer = @(ViewBag.Sum)</p>
+    }
+    
+
+        
+</div>

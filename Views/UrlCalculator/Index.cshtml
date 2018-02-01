@@ -1,1 +1,30 @@
+<h2>Url Calculator</h2>
 
+<div id="CalculatorInputForm">
+    <div class="form-group">
+        <label for="operand1">Enter the first operand:</label>
+        <input type="text" name="operand1" id="operand1" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label for="operand2">Enter the second operand:</label>
+        <input type="text" name="operand2" id="operand2" class="form-control" /> 
+    </div>
+    <div class="form-group">
+        <label for="operation">Choose the operation</label>
+        <select name="operation" id="operation" class="form-control">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+    </div>
+
+    <!-- TODO: make this inline script an event handler -->
+    <div class="form-group">
+        <a href="#" onclick="this.href = document.getElementById
+            ('operation').value + '/' + document.getElementById('operand1').value + '/' +
+            document.getElementById('operand2').value" target="_self" class="btn btn-default">
+            Calculate</a> 
+    </div>
+</div>
