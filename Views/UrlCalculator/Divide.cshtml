@@ -1,15 +1,14 @@
 <div id="CalculatorOutput">
     @if (ViewBag.ValidResult != false)
     {
-        <p>Answer = @(ViewBag.Sum)</p>
+        <p>Answer = @(ViewBag.Quotient)</p>
     }
     else
     {
         <p>@(ViewBag.Message)</p>
     }
     
-<!-- TODO: make this inline script an event handler -->
-    <div class="form-group">
+<div class="form-group">
         <a href="~/UrlCalculator" class="btn btn-default">
             Return</a> 
     </div>
