@@ -1,0 +1,28 @@
+<h2>Form Calculator</h2>
+
+<form action="FormCalculator/Calculate" method="POST" id="calculatorInputForm">
+    <div class="form-group">
+        <label for="operand1">Enter the first operand</label>
+        <input type="text" name="operand1" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="operand2">Enter the second operand</label>
+        <input type="text" name="operand2" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="operation">Choose the operation:</label>
+        <select name="operation" class="form-control">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" name="submit" value="Calculate" class="btn btn-default">
+    </div>
+
+</form>

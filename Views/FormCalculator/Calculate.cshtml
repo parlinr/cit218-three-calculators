@@ -1,0 +1,17 @@
+<h2>Calculate</h2>
+
+<div id="CalculatorOutput">
+    @if (ViewBag.ValidResult == true)
+    {
+        <p>Answer: @(ViewBag.answer)</p>
+    }
+    else
+    {
+        foreach (string line in @ViewBag.errorMessage)
+        {
+            <p>@line</p>
+        }
+    }
+
+    @Html.ActionLink("Return", "Index", "FormCalculator", null, new { @class= "btn btn-default"})
+</div>

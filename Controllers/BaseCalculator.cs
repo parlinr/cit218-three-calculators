@@ -44,6 +44,10 @@ namespace cit218_three_calculators.Controllers
 
         public double Divide(string operand1, string operand2)
         {
+            if (double.Parse(operand2) == 0)
+            {
+                throw new FormatException("This calculator does not support division by zero.");
+            }
             double[] numbers = Convert(operand1, operand2);
             return numbers[0] / numbers[1];
         }
