@@ -1,0 +1,20 @@
+<div id="CalculatorOutput">
+    @if (ViewBag.ValidResult != false)
+    {
+        <p>Answer = @(ViewBag.answer)</p>
+    }
+    else
+    {
+        foreach (string line in @ViewBag.errorMessage)
+        {
+            <p>@line</p>
+        }
+    }
+    
+<!-- TODO: make this inline script an event handler -->
+    <div class="form-group">
+        <a href="~/UrlCalculator" class="btn btn-default">
+            Return</a> 
+    </div>
+        
+</div>

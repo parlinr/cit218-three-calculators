@@ -45,8 +45,8 @@ namespace cit218_three_calculators
                     template: "{controller=Home}/{action=Index}/{id?}");
                 
                 routes.MapRoute(
-                    name: "add",
-                    template: "{controller=UrlCalculator}/{action=Add}/{operand1}/{operand2}");
+                    name: "calculate",
+                    template: "{controller=UrlCalculator}/{action=Calculate}/{operation}/{operand1}/{operand2}");
                 
             });
         }

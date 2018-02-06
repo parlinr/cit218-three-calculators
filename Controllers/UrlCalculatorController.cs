@@ -15,6 +15,77 @@ namespace cit218_three_calculators.Controllers
         {
             calculator = new BaseCalculator();
         }
+
+        public IActionResult Calculate(string operation, string operand1, string operand2)
+        {
+            double operationResult = 0;
+            ViewBag.ValidResult = false;
+            List<string> errorMessageText = new List<string>();
+            ViewBag.errormessage = null;
+            ViewBag.answer = null;
+            switch (operation)
+            {
+                case "add":
+                    try
+                    {
+                        operationResult = calculator.Add(operand1, operand2);
+                        ViewBag.ValidResult = true;
+                    }
+                    catch (Exception e)
+                    {
+                        errorMessageText.Add(e.Message);
+                    }
+                    break;
+                case "subtract":
+                     try
+                    {
+                        operationResult = calculator.Subtract(operand1, operand2);
+                        ViewBag.ValidResult = true;
+                    }
+                    catch (Exception e)
+                    {
+                        errorMessageText.Add(e.Message);
+                    }
+                    break;
+                case "multiply":
+                    try
+                    {
+                        operationResult = calculator.Multiply(operand1, operand2);
+                        ViewBag.ValidResult = true;
+                    }
+                    catch (Exception e)
+                    {
+                        errorMessageText.Add(e.Message);
+                    }
+                    break;
+                case "divide":
+                     try
+                    {
+                        operationResult = calculator.Divide(operand1, operand2);
+                        ViewBag.ValidResult = true;
+                    }
+                    catch (Exception e)
+                    {
+                        errorMessageText.Add(e.Message);
+                    }
+                    break;
+                case "factorial":
+                    try
+                    {
+
+                        operationResult = calculator.Factorial(operand1, operand2);
+                        ViewBag.ValidResult = true;
+                    }
+                    catch (Exception e)
+                    {
+                        errorMessageText.Add(e.Message);
+                    }
+                    break;
+            }
+            ViewBag.answer = operationResult;
+            ViewBag.errorMessage = errorMessageText;
+            return View();
+        }
         
         public IActionResult Index()
         {

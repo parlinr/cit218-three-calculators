@@ -17,14 +17,15 @@
             <option value="subtract">Subtract</option>
             <option value="multiply">Multiply</option>
             <option value="divide">Divide</option>
+            <option value="factorial">Factorial</option>
         </select>
     </div>
 
     <!-- TODO: make this inline script an event handler -->
     <div class="form-group">
-        <a href="#" onclick="this.href = 'UrlCalculator/' + document.getElementById
+        <a id="CalcSubmit" href="#" onclick="this.href = '/UrlCalculator/Calculate/' + document.getElementById
             ('operation').value + '/' + document.getElementById('operand1').value + '/' +
             document.getElementById('operand2').value" target="_self" class="btn btn-default">
-            Calculate</a> 
+            <span class="glow-text">Calculate</span></a> 
     </div>
 </div>

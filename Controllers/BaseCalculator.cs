@@ -24,6 +24,17 @@ namespace cit218_three_calculators.Controllers
                 throw new FormatException("The inputs were not entered in the correct format. They were either not numbers, too large, too small, or null.");
             }
         }
+        private int Convert(string operand1)
+        {
+            try
+            {
+                return int.Parse(operand1);
+            }
+            catch (Exception)
+            {
+                throw new FormatException("Something happened.");
+            }
+        }
         public double Add(string operand1, string operand2)
         {
             double[] numbers = Convert(operand1, operand2);
@@ -50,6 +61,35 @@ namespace cit218_three_calculators.Controllers
             }
             double[] numbers = Convert(operand1, operand2);
             return numbers[0] / numbers[1];
+        }
+
+        public int Factorial(string operand1, string operand2)
+        {
+            int value = 0;
+            if (!Int32.TryParse(operand1, out value))
+            {
+                throw new Exception("The factorial operation is not defined for values that are not integers.");
+            }
+            
+               
+            
+                
+                if (value < 0)
+                {
+                    throw new FormatException("The factorial operation is not defined for values that are less than zero.");
+                    
+                }
+            
+            
+
+            
+            return factorialLogic(value);
+        }
+
+        private int factorialLogic(int operand)
+        {
+            if (operand > 0) return operand * factorialLogic(operand - 1);
+            else return 1;
         }
     }
 
