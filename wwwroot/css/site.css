@@ -10,6 +10,13 @@
     padding-right: 15px;
 }
 
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
@@ -21,35 +28,10 @@
     width: 100%;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
     .carousel-caption {
         display: none;
     }
-}
-
-#CalculatorInputForm {
-    border: 0px solid transparent;
-    border-radius: 20px;
-    box-shadow: 2px 2px 20px black;
-    background-color: lightgoldenrodyellow;
-    padding: 10px;
-}
-
-h2 {
-    text-shadow: 0 0 10px gold;
-}
-
-#CalcSubmit {
-    background-color: lightgreen;
-}
-
-.glow-text {
-    text-shadow: 0 0 5px rgb(0, 255, 42);
 }

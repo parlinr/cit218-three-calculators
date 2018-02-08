@@ -1,0 +1,10 @@
+/home/rcp/cit218-three-calculators/bin/Debug/netcoreapp1.1/cit218-three-calculators.deps.json
+/home/rcp/cit218-three-calculators/bin/Debug/netcoreapp1.1/cit218-three-calculators.runtimeconfig.json
+/home/rcp/cit218-three-calculators/bin/Debug/netcoreapp1.1/cit218-three-calculators.runtimeconfig.dev.json
+/home/rcp/cit218-three-calculators/bin/Debug/netcoreapp1.1/cit218-three-calculators.dll
+/home/rcp/cit218-three-calculators/bin/Debug/netcoreapp1.1/cit218-three-calculators.pdb
+/home/rcp/cit218-three-calculators/obj/Debug/netcoreapp1.1/cit218-three-calculators.csproj.CoreCompileInputs.cache
+/home/rcp/cit218-three-calculators/obj/Debug/netcoreapp1.1/cit218-three-calculators.AssemblyInfoInputs.cache
+/home/rcp/cit218-three-calculators/obj/Debug/netcoreapp1.1/cit218-three-calculators.AssemblyInfo.cs
+/home/rcp/cit218-three-calculators/obj/Debug/netcoreapp1.1/cit218-three-calculators.dll
+/home/rcp/cit218-three-calculators/obj/Debug/netcoreapp1.1/cit218-three-calculators.pdb
