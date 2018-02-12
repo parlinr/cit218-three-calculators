@@ -53,3 +53,8 @@ h2 {
 .glow-text {
     text-shadow: 0 0 5px rgb(0, 255, 42);
 }
+
+.contentCells {
+    text-align: right;
+    padding: 5px;
+}

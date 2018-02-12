@@ -1,0 +1,37 @@
+@{
+    double currentTemp = Math.Round(ViewBag.Temperature / 5) * 5;
+    double currentWindSpeed = Math.Round(ViewBag.WindSpeed / 5) * 5;
+}
+
+<h2>Wind Chill Table</h2>
+<div id="WindChillTable">
+    <table>
+        <tr>
+            <td class="headerCells">(mph)</td>
+            @for (var temp = -40; temp<= 40; temp += 5)
+            {
+                <td class="headerCells">@temp&deg;</td>
+            }
+        </tr>
+
+        @for(var windSpeed = 0; windSpeed <= 50; windSpeed += 5)
+        {
+            <tr>
+                <td class="headerCells">@windSpeed</td>
+                @for (var temp = -40 ; temp <= 40; temp += 5)
+                {
+                    var windChill = 35.74 + (0.6215 * temp) - 35.75 * Math.Pow(windSpeed, 0.16) + 0.4275 * temp * Math.Pow(windSpeed,0.16);
+                    windChill = Math.Round(windChill, 0);
+                    if (temp == currentTemp && windSpeed == currentWindSpeed)
+                    {
+                        <td class="contentCells" style="background-color:green; color:white;">@windChill</td>
+                    }
+                    else
+                    {
+                        <td class="contentCells">@windChill</td>
+                    }
+                }
+            </tr>
+        }
+    </table>
+</div>
